@@ -1,0 +1,12 @@
+.pagination a {
+color: azure;
+background-color: black;
+padding: 1%;
+border-radius: 20%;
+margin: 5px;
+transition: ba;
+}
+
+.pagination a:hover:not(.active) {
+background-color: #3700ff;
+}
