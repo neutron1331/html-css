@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calc</title>
+    
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    
+
+    <button 
+        type="button" 
+        onclick="document.getElementById('vysledek').innerHTML = 'button cluck'"
+        >vypočítat
+    </button>
+
+    <button 
+        type="button" 
+        onclick="document.getElementById('vysledek').style.display = 'none'"         
+        ondblclick="document.getElementById('vysledek').style.display = 'block'"
+        >vymazání výsledku
+    </button>
+
+    <p id="vysledek"></p>
+
+    <script>
+        document.getElementById('vysledek').innerHTML = "nic jste ješte nevpočítal"
+    </script>
+
+    <button 
+        type="button" 
+        onclick="write(41)"
+        >DELETE ALL
+    </button>
+
+    <button 
+        type="button" 
+        onclick="alert(5+6)"
+        >test
+    </button>
+
+    <button 
+        type="button" 
+        onclick="console.log('log test button press')"
+        >log test
+    </button>
+
+
+</body>
+</html>
