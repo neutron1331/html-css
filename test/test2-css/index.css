@@ -1,0 +1,36 @@
+header
+{    
+    background: url(immages/head-backround.jpg);
+}
+.logo
+{
+    margin-left: 5%;
+}
+
+.bar
+{
+    display: flex;
+    flex-direction: row;
+    gap: 200px; 
+}
+.shortcuts
+{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    gap: 50px; 
+}
+header section
+{
+    margin-left: 35%;
+}
+.part2
+{
+    background-color: blue;
+    margin: 0%;    
+}
+.part2-1
+{
+    margin-left: 28%;
+   
+}
