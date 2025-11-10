@@ -1,0 +1,29 @@
+body 
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4faff;
+}
+section 
+{
+    margin: 2%;
+}
+
+/*_________________________________________________________________*/
+
+nav 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nav_labels
+{
+    display: flex;
+    gap: 30px;
+    text-transform: uppercase;
+}
+#selected_label
+{
+    color: #fde613;
+
+}
