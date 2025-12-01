@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Úkoly 31–50 – JavaScript + Tailwind</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+<!-- Layout: Sidebar + Content -->
+<div class="flex">
+
+    <!-- Sidebar navigace -->
+    <nav class="w-64 bg-white shadow h-screen sticky top-0 p-6 overflow-auto">
+
+        <h2 class="text-xl font-semibold mb-4">Navigace</h2>
+
+        <ul class="space-y-2 text-blue-700">
+            <li><a href="#ukol31" class="hover:underline">31 – Alert</a></li>
+            <li><a href="#ukol32" class="hover:underline">32 – Změna textu</a></li>
+            <li><a href="#ukol33" class="hover:underline">33 – Hodiny</a></li>
+            <li><a href="#ukol34" class="hover:underline">34 – Pozadí</a></li>
+            <li><a href="#ukol35" class="hover:underline">35 – Obrázek</a></li>
+            <li><a href="#ukol36" class="hover:underline">36 – Formulář</a></li>
+            <li><a href="#ukol37" class="hover:underline">37 – Počítadlo</a></li>
+            <li><a href="#ukol38" class="hover:underline">38 – Toggle text</a></li>
+            <li><a href="#ukol39" class="hover:underline">39 – Validace</a></li>
+            <li><a href="#ukol40" class="hover:underline">40 – Slider</a></li>
+
+            <li class="mt-4 font-semibold text-gray-600">Pokročilé:</li>
+            <li><a href="#ukol41" class="hover:underline">41 – Heslo</a></li>
+            <li><a href="#ukol42" class="hover:underline">42 – Faktoriál</a></li>
+            <li><a href="#ukol43" class="hover:underline">43 – Palindrom</a></li>
+            <li><a href="#ukol44" class="hover:underline">44 – Stopky</a></li>
+            <li><a href="#ukol45" class="hover:underline">45 – Kostka</a></li>
+            <li><a href="#ukol46" class="hover:underline">46 – Móda</a></li>
+            <li><a href="#ukol47" class="hover:underline">47 – Datum</a></li>
+            <li><a href="#ukol48" class="hover:underline">48 – Do konce roku</a></li>
+            <li><a href="#ukol49" class="hover:underline">49 – To-do list</a></li>
+            <li><a href="#ukol50" class="hover:underline">50 – localStorage</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Content -->
+    <main class="flex-1 p-10 space-y-10">
+
+        <h1 class="text-4xl font-bold mb-10">Úkoly 31–50 (Tailwind UI)</h1>
+
+        <!-- ===== 31 ===== -->
+        <section id="ukol31" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">31) Alert</h2>
+            <button id="btn31"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Klikni</button>
+        </section>
+
+        <!-- ===== 32 ===== -->
+        <section id="ukol32" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">32) Změna textu</h2>
+            <p id="text32" class="mb-2">Původní text</p>
+            <button id="btn32"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Změň text</button>
+        </section>
+
+        <!-- ===== 33 ===== -->
+        <section id="ukol33" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">33) Aktuální čas</h2>
+            <div id="clock33" class="text-xl font-mono"></div>
+        </section>
+
+        <!-- ===== 34 ===== -->
+        <section id="ukol34" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">34) Změna pozadí</h2>
+            <button id="btn34"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Změň pozadí
+            </button>
+        </section>
+
+        <!-- ===== 35 ===== -->
+        <section id="ukol35" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">35) Zvětšující obrázek</h2>
+            <img id="img35" src="https://via.placeholder.com/150"
+                 class="rounded shadow cursor-pointer mx-auto">
+        </section>
+
+        <!-- ===== 36 ===== -->
+        <section id="ukol36" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">36) Formulář → konzole</h2>
+            <form id="form36" class="space-y-3">
+                <input id="name36" type="text" placeholder="Jméno" class="border p-2 w-full rounded">
+                <input id="email36" type="email" placeholder="Email" class="border p-2 w-full rounded">
+                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Odeslat</button>
+            </form>
+        </section>
+
+        <!-- ===== 37 ===== -->
+        <section id="ukol37" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">37) Počítadlo kliknutí</h2>
+            <p>Počet: <span id="counter37" class="font-bold">0</span></p>
+            <button id="btn37"
+                class="mt-3 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Klikni</button>
+        </section>
+
+        <!-- ===== 38 ===== -->
+        <section id="ukol38" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">38) Skrytí textu</h2>
+            <p id="text38" class="mb-2">Tento text lze skrýt.</p>
+            <button id="btn38"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Skryj/Zobraz</button>
+        </section>
+
+        <!-- ===== 39 ===== -->
+        <section id="ukol39" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">39) Validace formuláře</h2>
+            <form id="form39" class="space-y-3">
+                <input id="name39" type="text" placeholder="Jméno" class="border p-2 w-full rounded">
+                <input id="email39" type="email" placeholder="Email" class="border p-2 w-full rounded">
+                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ověřit</button>
+            </form>
+        </section>
+
+        <!-- ===== 40 ===== -->
+        <section id="ukol40" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">40) Slider – velikost textu</h2>
+            <p id="text40" class="mb-3">Měň mou velikost!</p>
+            <input id="slider40" type="range" min="10" max="50" value="16" class="w-full">
+        </section>
+
+        <!-- ===== 41 ===== -->
+        <section id="ukol41" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">41) Náhodné heslo</h2>
+            <button onclick="document.getElementById('pass41').textContent = generatePassword(12)"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Generuj</button>
+            <p id="pass41" class="mt-2 font-mono"></p>
+        </section>
+
+        <!-- ===== 42 ===== -->
+        <section id="ukol42" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">42) Faktoriál</h2>
+            <div class="flex gap-3">
+                <input id="fact42" type="number" class="border p-2 rounded">
+                <button onclick="document.getElementById('out42').textContent = factorial(Number(fact42.value))"
+                    class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Spočítej</button>
+            </div>
+            <p id="out42" class="mt-2"></p>
+        </section>
+
+        <!-- ===== 43 ===== -->
+        <section id="ukol43" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">43) Palindrom</h2>
+            <div class="flex gap-3">
+                <input id="pal43" type="text" class="border p-2 rounded">
+                <button onclick="document.getElementById('out43').textContent = isPalindrome(pal43.value)"
+                    class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Zkontroluj</button>
+            </div>
+            <p id="out43" class="mt-2"></p>
+        </section>
+
+        <!-- ===== 44 ===== -->
+        <section id="ukol44" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">44) Stopky</h2>
+            <p id="stopky44" class="text-2xl font-mono mb-3">0</p>
+            <button onclick="startTimer()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Start</button>
+            <button onclick="stopTimer()" class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Stop</button>
+            <button onclick="resetTimer()" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Reset</button>
+        </section>
+
+        <!-- ===== 45 ===== -->
+        <section id="ukol45" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">45) Kostka</h2>
+            <button id="btn45" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Hoď kostkou
+            </button>
+            <p class="mt-2">Výsledek: <span id="dice45" class="font-bold">-</span></p>
+        </section>
+
+        <!-- ===== 46 ===== -->
+        <section id="ukol46" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">46) Móda pole</h2>
+            <button onclick="document.getElementById('out46').textContent = mode([1,2,3,3,3,4,5])"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Zjisti módu</button>
+            <p id="out46" class="mt-2"></p>
+        </section>
+
+        <!-- ===== 47 ===== -->
+        <section id="ukol47" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">47) Formátování data</h2>
+            <button onclick="document.getElementById('out47').textContent = formatDateCZ(new Date())"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Zobraz dnešní datum</button>
+            <p id="out47" class="mt-2"></p>
+        </section>
+
+        <!-- ===== 48 ===== -->
+        <section id="ukol48" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">48) Kolik dní do konce roku</h2>
+            <button onclick="document.getElementById('out48').textContent = daysToEndOfYear()"
+                class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Spočítej</button>
+            <p id="out48" class="mt-2"></p>
+        </section>
+
+        <!-- ===== 49 ===== -->
+        <section id="ukol49" class="p-6 bg-white rounded shadow">
+            <h2 class="text-2xl font-semibold mb-3">49) To-do list</h2>
+            <div class="flex gap-3 mb-3">
+                <input id="todoInput" type="text" placeholder="Nový úkol" class="border p-2 rounded flex-1">
+                <button onclick="addTodo()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Přidat</button>
+            </div>
+            <ul id="todoList" class="list-disc ml-5"></ul>
+        </section>
+
+        <!-- ===== 50 ===== -->
+        <section id="ukol50" class="p-6 bg-white rounded shadow mb-20">
+            <h2 class="text-2xl font-semibold mb-3">50) localStorage</h2>
+            <div class="flex gap-3 mb-3">
+                <input id="name50" type="text" placeholder="Jméno" class="border p-2 rounded flex-1">
+                <button onclick="saveName()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Uložit</button>
+                <button onclick="loadName()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Načíst</button>
+            </div>
+            <p id="output50"></p>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

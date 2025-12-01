@@ -47,6 +47,7 @@ function Backround_change_red_u34(){
     Backround_change_u34("red");}
 function Backround_change_white_u34(){
     Backround_change_u34("white");}
+
 function Backround_change_u34(barva)
 {
     document.body.style.backgroundColor = barva;
@@ -58,10 +59,32 @@ function Backround_change_u34(barva)
       - Změnu proveď pomocí třídy v CSS nebo style.width v JS.
 */
 
+const image_u35 = document.getElementById("Img_u35");
+image_u35.addEventListener("mouseover", Image_wide_func_u35);
+image_u35.addEventListener("mouseout", Image_not_wide_func_u35);
+
+function Image_wide_func_u35()
+{
+      image_u35.style.width = "20%";
+}
+function Image_not_wide_func_u35()
+{
+      image_u35.style.width = "10%";
+}
+
+
 /* 36) Po odeslání formuláře vypiš hodnoty inputů do konzole.
       - Zakázat přirozené odeslání formuláře pomocí event.preventDefault().
       - Použij funkci, která načte hodnoty inputů.
 */
+
+const text1_id_u36 = document.getElementById("Input_text1_u36");
+const text2_id_u36 = document.getElementById("Input_text2_u36");
+function Formulář_u36()
+{
+      let text1_u36 = text1_id_u36;
+}
+
 
 /* 37) Vytvoř jednoduché „počítadlo kliknutí“.
       - Po každém kliknutí zvýší číslo o 1 a zobraz ho v HTML.
