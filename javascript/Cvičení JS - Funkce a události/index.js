@@ -3,11 +3,12 @@
       - Použij událost onclick nebo addEventListener.
 */
 
-document.getElementById("Alert").addEventListener("click", alert_func_u31);
+document.getElementById("Alert_u31").addEventListener("click", alert_func_u31);
 function alert_func_u31()
 {
     alert("Ahoj světe!");
 }
+
 
 /* 32) Po kliknutí na tlačítko změň text vybraného HTML elementu.
       - Napiš funkci, která změní .textContent nebo .innerText.
@@ -21,21 +22,36 @@ function Text_change_u32()
     document.getElementById("Text_u32").innerText = change();
 }
 
+
 /* 33) Vypiš do <div> aktuální čas, který se bude každou sekundu aktualizovat.
       - Použij setInterval a vlastní funkci pro získání času.
       - Funkce by měla vracet formátovaný čas (HH:MM:SS).
 */
 
+setInterval(Time_func_u33,1000)
 function Time_func_u33()
 {
-    let time = new Date();
+    let time = new Date().toLocaleTimeString();
     document.getElementById("Time_u33").innerHTML = time;
 }
+
 
 /* 34) Po kliknutí na tlačítko změň barvu pozadí celé stránky.
       - Vytvoř funkci s parametrem (barva).
       - Vyzkoušej nastavit hodnotu přes document.body.style.
 */
+
+function Backround_change_blue_u34(){
+    Backround_change_u34("blue");}
+function Backround_change_red_u34(){
+    Backround_change_u34("red");}
+function Backround_change_white_u34(){
+    Backround_change_u34("white");}
+function Backround_change_u34(barva)
+{
+    document.body.style.backgroundColor = barva;
+}
+
 
 /* 35) Po najetí myší na obrázek ho zvětši.
       - Použij eventy mouseover a mouseout.
