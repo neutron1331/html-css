@@ -65,7 +65,7 @@ image_u35.addEventListener("mouseout", Image_not_wide_func_u35);
 
 function Image_wide_func_u35()
 {
-      image_u35.style.width = "20%";
+      image_u35.style.width = "100%";
 }
 function Image_not_wide_func_u35()
 {
@@ -82,7 +82,9 @@ const text1_id_u36 = document.getElementById("Input_text1_u36");
 const text2_id_u36 = document.getElementById("Input_text2_u36");
 function Formulář_u36()
 {
-      let text1_u36 = text1_id_u36;
+      let text1_u36 = text1_id_u36.textContent;
+      let text2_u36 = text2_id_u36.textContent;
+      alert(text1_u36 + text2_u36)
 }
 
 
