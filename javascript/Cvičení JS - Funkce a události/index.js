@@ -93,15 +93,47 @@ function Formulář_u36()
       - Proměnná se musí nacházet ve správném scope.
 */
 
+let i_u37 = 0
+let text_u37;
+function Počítadlo_u37()
+{
+      i_u37++;
+      text_u37 = "počet je: " + i_u37;
+      document.getElementById("pocet_u37").innerHTML = text_u37;
+}
+
+
 /* 38) Po kliknutí na tlačítko skryj nebo zobraz text.
       - Můžeš použít classList.toggle().
       - Zvaž použití anonymní nebo arrow funkce.
 */
 
+let bool_u38 = true;
+function Hide_show_u38()
+{
+      if (bool_u38)
+      {
+            document.getElementById("text_u38").style.visibility = "collapse";
+            bool_u38 = false;
+      }
+      else
+      {            
+            document.getElementById("text_u38").style.visibility = "visible";
+            bool_u38 = true;
+      }
+}
+
+
 /* 39) Validuj formulář – zkontroluj, jestli je vyplněné jméno a e-mail.
       - Pokud není validní, zobraz chybovou hlášku.
       - Použij jednoduchou podmínku a funkci validateForm().
 */
+
+function ValidateForm()
+{
+      
+}
+
 
 /* 40) Pomocí slideru (input type="range") měň velikost písma textu.
       - Po změně hodnoty aktualizuj style.fontSize.
