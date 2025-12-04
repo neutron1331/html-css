@@ -154,17 +154,16 @@ function ValidateForm()
       - Vyzkoušej rekurzi nebo cyklus.
 */
 
-let num_u42 = 0;
-let out_u42 = 0;
-
-function factorial(num_u42)
+function factorial()
 {
-    out_u42 = num_u42;
-    for (let i = 0;i <= num_u42; i++)
+      let out_u42 = 1;
+      const factorial_Input_u42 = document.getElementById("input_u42");
+      const num_u42 = Number(factorial_Input_u42.value);
+    for (let i = 0;i < num_u42; i++)
     {
-        out_u42 *= (num_u42-i);
+        out_u42 *= num_u42-i;
     }
-    return out_u42;
+    factorial_Input_u42.value = out_u42;
 }
 
 
@@ -206,9 +205,11 @@ function factorial(num_u42)
 
 const todo_input_u49 = document.getElementById("input_todolist_u49");
 const todo_output_u49 = document.getElementById("input_todolist_u49");
+let todolist_pole_u49 = [];
 function Todolist_u49()
 {
 
+      //todolist_pole_u49.push
 }
 
 

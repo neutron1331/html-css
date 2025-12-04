@@ -50,4 +50,43 @@ Funkce:
     scope
     default parametry
     callback funkce
+
+
+regex:
+    match - najde shody v textu
+    replace - nahradí shody v textu
+    search - najde pozici shody v textu
+
+    \d - číslice
+    \w - písmeno nebo číslice
+    \s - mezera
+
+    ????difikátory:
+        + - jeden nebo více:
+        * - nula nebo více:
+        ? - nula nebo jeden:
+        . - jakýkoliv znak
+        {} - počet výskytů
+
+    skupiny:
+        () - zachycuje skupinu
+        [] - jakýkoliv znak v závorce
+         | - nebo
+
+    modifikátory:
+        /g - globální
+        /i - case insensitive
+        /s - dotall (tečka zahrnuje i nové řádky)
+        /m - multiline (začátek a konec řádku)
+
+       
+let text = "Hello World! This is a test, 123 test1 test2 test3."
+
+const reg1 = '/[A-Z]\w+/g'
+const reg2 = '/\d /g'
+
+let result1 = text.match(reg1) // najde všechna slova začínající velkým písmenem (Hello, World, This)
+let result2 = text.match(reg2) // najde všechny číslice v textu (1,2,3)
+let result3 = text.replace(reg2,"") // odstraní všechny číslice z textu
+
 */
