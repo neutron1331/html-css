@@ -52,7 +52,7 @@ Funkce:
     callback funkce
 
 
-regex:
+regex (https://regexr.com/):
     match - najde shody v textu
     replace - nahradí shody v textu
     search - najde pozici shody v textu
