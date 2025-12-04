@@ -139,3 +139,80 @@ function ValidateForm()
       - Po změně hodnoty aktualizuj style.fontSize.
       - Hodnota ze slideru bude vstupním parametrem funkce.
 */
+
+/* ================================================
+   🟣 ÚKOLY 41–50: Pokročilejší logika a práce s daty
+   ================================================ */
+
+/* 41) Generuj náhodné heslo z písmen, číslic a symbolů.
+      - Funkce přijme délku jako parametr.
+      - Použij Math.random a vlastní pole znaků.
+*/
+
+/* 42) Spočítej faktoriál zadaného čísla.
+      - Vytvoř klasickou funkci nebo arrow funkci.
+      - Vyzkoušej rekurzi nebo cyklus.
+*/
+
+let num_u42 = 0;
+let out_u42 = 0;
+
+function factorial(num_u42)
+{
+    out_u42 = num_u42;
+    for (let i = 0;i <= num_u42; i++)
+    {
+        out_u42 *= (num_u42-i);
+    }
+    return out_u42;
+}
+
+
+/* 43) Zjisti, zda je text palindrom („kajak“, „oko“).
+      - Vytvoř funkci, která vrací true/false.
+      - Odstraň mezery a porovnej text pozpátku.
+*/
+
+/* 44) Vytvoř jednoduché stopky – Start / Stop / Reset.
+      - Použij setInterval a clearInterval.
+      - Funkce musí správně pracovat s proměnnými ve scope.
+*/
+
+/* 45) Simuluj hod kostkou (1–6).
+      - Funkce vrací náhodné číslo 1–6.
+      - Výsledek vypiš do HTML.
+*/
+
+/* 46) Najdi nejčastější hodnotu v poli (moda).
+      - Vytvoř funkci, která přijme pole jako parametr.
+      - Použij objektový „počítací“ slovník (frequency map).
+*/
+
+/* 47) Vytvoř funkci, která formátuje datum do českého formátu
+      (DD.MM.YYYY).
+      - Funkce dostane objekt Date a vrací string.
+*/
+
+/* 48) Zjisti, kolik dní zbývá do konce roku.
+      - Spočítej rozdíl mezi dnešním datem a 31.12.
+      - Vrátí celé číslo (Math.floor).
+*/
+
+/* 49) Vytvoř jednoduchý to-do list:
+      - Přidávání úkolů
+      - Odstraňování úkolů
+      - Každá operace musí být funkce.
+*/
+
+const todo_input_u49 = document.getElementById("input_todolist_u49");
+const todo_output_u49 = document.getElementById("input_todolist_u49");
+function Todolist_u49()
+{
+
+}
+
+
+/* 50) Ulož a načti data z localStorage (např. skóre nebo jméno).
+      - Použij localStorage.setItem a localStorage.getItem.
+      - Zobraz načtená data v HTML.
+*/
