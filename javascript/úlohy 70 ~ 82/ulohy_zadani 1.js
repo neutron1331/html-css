@@ -26,6 +26,12 @@ function validateEmail(email)
 
 // zde bude vaše řešení
 
+function findNumbers(text)
+{
+    const regex = /\d+/g;
+    return text.match(regex) || [];
+}
+
 
 /* -----------------------------------------------------------
  * Úloha 72: Formátování data
@@ -36,6 +42,12 @@ function validateEmail(email)
  * ----------------------------------------------------------- */
 
 // zde bude vaše řešení
+
+function formatDate(dateString)
+{
+    const regex = /(\d{2})\.(\d{2})\.(\d{4})/;
+    return dateString.replace(regex, '$3-$2-$1');
+}
 
 
 /* -----------------------------------------------------------
@@ -52,6 +64,12 @@ function validateEmail(email)
 
 // zde bude vaše řešení
 
+function validatePassword(password)
+{
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{8,}$/;
+    return regex.test(password);
+}
+
 
 /* -----------------------------------------------------------
  * Úloha 74: Extrakce HTML tagů
@@ -62,6 +80,12 @@ function validateEmail(email)
  * ----------------------------------------------------------- */
 
 // zde bude vaše řešení
+
+function extractTags(html)
+{
+    const regex = /<([a-zA-Z]+)>/gm;
+    return html.match(regex) || [];
+}
 
 
 /* -----------------------------------------------------------
