@@ -29,6 +29,7 @@ function validateEmail(email)
 function findNumbers(text)
 {
     const regex = /\d+/g;
+    console.log(text.match(regex) || []);
     return text.match(regex) || [];
 }
 
@@ -83,8 +84,10 @@ function validatePassword(password)
 
 function extractTags(html)
 {
-    const regex = /<([a-zA-Z]+)>/gm;
+    const regex = /<([a-zA-Z]+)>/g;
+    console.log(html.match(regex) || []);
     return html.match(regex) || [];
+    
 }
 
 
