@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regex Úlohy – Tailwind UI</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex h-screen font-sans bg-gray-100">
+
+<!-- Sidebar -->
+<div class="w-64 bg-gray-800 text-white p-6 overflow-y-auto">
+    <h2 class="text-xl font-bold mb-4">Úlohy</h2>
+    <ul id="task-list" class="space-y-2">
+        <li data-target="task70" class="cursor-pointer hover:underline">70 – Validace e-mailu</li>
+        <li data-target="task71" class="cursor-pointer hover:underline">71 – Hledání čísel</li>
+        <li data-target="task72" class="cursor-pointer hover:underline">72 – Formátování data</li>
+        <li data-target="task73" class="cursor-pointer hover:underline">73 – Validace hesla</li>
+        <li data-target="task74" class="cursor-pointer hover:underline">74 – Extrakce HTML tagů</li>
+        <li data-target="task75" class="cursor-pointer hover:underline">75 – Čištění textu</li>
+        <li data-target="task76" class="cursor-pointer hover:underline">76 – Parsování CSV</li>
+        <li data-target="task77" class="cursor-pointer hover:underline">77 – Validace kreditní karty</li>
+        <li data-target="task78" class="cursor-pointer hover:underline">78 – Minifikace CSS</li>
+        <li data-target="task79" class="cursor-pointer hover:underline">79 – Analyzátor logů</li>
+        <li data-target="task80" class="cursor-pointer hover:underline">80 – Template engine</li>
+        <li data-target="task81" class="cursor-pointer hover:underline">81 – Český telefon</li>
+        <li data-target="task82" class="cursor-pointer hover:underline">82 – Rozdělení camelCase</li>
+    </ul>
+</div>
+
+<!-- Hlavní obsah -->
+<div class="flex-1 p-6 overflow-y-auto" id="main">
+
+<!-- Generické sekce pro úlohy -->
+<section id="task70" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 70: Validace e-mailu</h3>
+    <input type="text" id="Input70" placeholder="Zadej e-mail" class="w-full p-2 border rounded mb-2">
+    <button id="run70" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ověřit e-mail</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="Output70"></div>
+</section>
+
+<section id="task71" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 71: Hledání čísel</h3>
+    <textarea id="Input71" placeholder="Zadej text s čísly" class="w-full p-2 border rounded mb-2"></textarea>
+    <button id="run71" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Najít čísla</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="Output71"></div>
+</section>
+
+<section id="task72" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 72: Formátování data</h3>
+    <input id="Input72" type="text" id="dateInput" placeholder="DD.MM.YYYY" class="w-full p-2 border rounded mb-2">
+    <button id="run72" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Formátovat</button>
+    <div class="output mt-2 p-2 bg-gray-200 rounded" id="Output72"></div>
+</section>
+
+<section id="task73" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 73: Validace hesla</h3>
+    <input type="text" id="Input73" placeholder="Zadej heslo" class="w-full p-2 border rounded mb-2">
+    <button id="run73" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ověřit heslo</button>
+    <div id="Output73" class="output mt-2 p-2 bg-gray-200 rounded"></div>
+</section>
+
+<section id="task74" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 74: Extrakce HTML tagů</h3>
+    <textarea id="Input74" placeholder="Zadej HTML kód" class="w-full p-2 border rounded mb-2"></textarea>
+    <button id="run74" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Extrahovat tagy</button>
+    <div id="Output74" class="output mt-2 p-2 bg-gray-200 rounded"></div>
+</section>
+
+<section id="task75" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 75: Čištění textu</h3>
+    <textarea id="Input75" placeholder="Zadej text" class="w-full p-2 border rounded mb-2"></textarea>
+    <button id="run75" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Vyčistit text</button>
+    <div id="Output75" class="output mt-2 p-2 bg-gray-200 rounded"></div>
+</section>
+
+<section id="task76" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 76: Parsování CSV</h3>
+    <textarea id="Input76" placeholder="Zadej CSV text" class="w-full p-2 border rounded mb-2"></textarea>
+    <button id="run76" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Parsovat CSV</button>
+    <div id="Output76" class="output mt-2 p-2 bg-gray-200 rounded"></div>
+</section>
+
+<section id="task77" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 77: Validace kreditní karty</h3>
+    <input type="text" id="Input77" placeholder="Zadej číslo karty" class="w-full p-2 border rounded mb-2">
+    <button id="run77" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ověřit kartu</button>
+    <div id="Output77" class="output mt-2 p-2 bg-gray-200 rounded"></div>
+</section>
+
+<section id="task78" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 78: Minifikace CSS</h3>
+    <textarea id="Input78" placeholder="Zadej CSS" class="w-full p-2 border rounded mb-2"></textarea>
+    <button id="run78" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Minifikovat CSS</button>
+    <div id="Output78" class="output mt-2 p-2 bg-gray-200 rounded"></div>
+</section>
+
+<section id="task79" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 79: Analyzátor logů</h3>
+    <textarea id="Input79" placeholder="Zadej logy" class="w-full p-2 border rounded mb-2"></textarea>
+    <button id="run79" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Analyzovat logy</button>
+    <div id="Output79" class="output mt-2 p-2 bg-gray-200 rounded"></div>
+</section>
+
+<section id="task80" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 80: Template engine</h3>
+    <textarea id="Input80" placeholder="Zadej šablonu" class="w-full p-2 border rounded mb-2"></textarea>
+    <button id="run80" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Render</button>
+    <div id="Output80" class="output mt-2 p-2 bg-gray-200 rounded"></div>
+</section>
+
+<section id="task81" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 81: Validace českého telefonu</h3>
+    <input type="text" id="Input81" placeholder="+420 123 456 789" class="w-full p-2 border rounded mb-2">
+    <button id="run81" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ověřit telefon</button>
+    <div id="Output81" class="output mt-2 p-2 bg-gray-200 rounded"></div>
+</section>
+
+<section id="task82" class="mb-10 border-b pb-6">
+    <h3 class="text-lg font-bold mb-2">Úloha 82: Rozdělení camelCase</h3>
+    <input type="text" id="Input82" placeholder="camelCaseText" class="w-full p-2 border rounded mb-2">
+    <button id="run82" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Rozdělit</button>
+    <div id="Output82" class="output mt-2 p-2 bg-gray-200 rounded"></div>
+</section>
+
+</div>
+
+<script>
+/* -----------------------------------------------------------
+ * Sidebar scrollování
+ * ----------------------------------------------------------- */
+document.querySelectorAll('#task-list li').forEach(item => {
+    item.addEventListener('click', () => {
+        const target = document.getElementById(item.dataset.target);
+        target.scrollIntoView({behavior:'smooth'});
+    });
+});
+</script>
+
+<!-- Externí JS s implementací funkcí -->
+<script src="ulohy_zadani 1.js"></script>
+
+<script>
+
+/* -----------------------------------------------------------
+ * Připojení tlačítek k externím funkcím
+ * ----------------------------------------------------------- */
+    var out70 = document.getElementById(`Output70`);
+    var in70 = document.getElementById(`Input70`);
+    var func70 = () => {out70.innerHTML = validateEmail(in70.value)}
+    document.getElementById(`run70`).addEventListener('click', func70);
+
+    var out71 = document.getElementById(`Output71`);
+    var in71 = document.getElementById(`Input71`);
+    var func71 = ()=>{out71.innerHTML = findNumbers(in71.value)}
+    document.getElementById(`run71`).addEventListener('click', func71);
+
+    var out72 = document.getElementById(`Output72`);
+    var in72 = document.getElementById(`Input72`);
+    var func72 = ()=>{out72.innerHTML = formatDate(in72.value)}
+    document.getElementById(`run72`).addEventListener('click', func72);
+
+    var out73 = document.getElementById(`Output73`);
+    var in73 = document.getElementById(`Input73`);
+    var func73 = ()=>{out73.innerHTML = validatePassword(in73.value)}
+    document.getElementById(`run73`).addEventListener('click', func73);
+
+    var out74 = document.getElementById(`Output74`);
+    var in74 = document.getElementById(`Input74`);
+    var func74 = ()=>{out74.innerHTML = extractTags(in74.value)}
+    document.getElementById(`run74`).addEventListener('click', func74);
+
+    var out75 = document.getElementById(`Output75`);
+    var in75 = document.getElementById(`Input75`);
+    var func75 = ()=>{out75.innerHTML = cleanText(in75.value)}
+    document.getElementById(`run75`).addEventListener('click', func75);
+
+    var out76 = document.getElementById(`Output76`);
+    var in76 = document.getElementById(`Input76`);
+    var func76 = ()=>{out76.innerHTML = parseCSV(in76.value)}
+    document.getElementById(`run76`).addEventListener('click', func76);
+
+    var out77 = document.getElementById(`Output77`);
+    var in77 = document.getElementById(`Input77`);
+    var func77 = ()=>{out77.innerHTML = validateCreditCard(in77.value)}
+    document.getElementById(`run77`).addEventListener('click', func77);
+
+    var out78 = document.getElementById(`Output78`);
+    var in78 = document.getElementById(`Input78`);
+    var func78 = ()=>{out78.innerHTML = minifyCSS(in78.value)}
+    document.getElementById(`run78`).addEventListener('click', func78);
+
+    var out79 = document.getElementById(`Output79`);
+    var in79 = document.getElementById(`Input79`);
+    var func79 = ()=>{out79.innerHTML = parseLogs(in79.value)}
+    document.getElementById(`run79`).addEventListener('click', func79);
+
+    var out80 = document.getElementById(`Output80`);
+    var in80 = document.getElementById(`Input80`);
+    var func80 = ()=>{out80.innerHTML = renderTemplate(in80.value)}
+    document.getElementById(`run80`).addEventListener('click', func80);
+
+    var out81 = document.getElementById(`Output81`);
+    var in81 = document.getElementById(`Input81`);
+    var func81 = ()=>{out81.innerHTML = validateCzechPhone(in81.value)}
+    document.getElementById(`run81`).addEventListener('click', func81);
+
+    var out82 = document.getElementById(`Output82`);
+    var in82 = document.getElementById(`Input82`);
+    var func82 = ()=>{out82.innerHTML = camelCaseToWords(in82.value)}
+    document.getElementById(`run82`).addEventListener('click', func82);
+
+</script>
+
+</body>
+</html>
