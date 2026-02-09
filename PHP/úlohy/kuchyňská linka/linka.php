@@ -26,7 +26,7 @@
     echo "<br>".$montaz;
 */
 
-    $cena = (($delka*$material)+$barva+$styl+$montaz);
+    $cena = ((($delka*($material+10000))+$barva+$styl+$montaz));
 
     if (!empty($_POST["spotrebic1"])) {$cena += $spotrebic1;}
     if (!empty($_POST["spotrebic2"])) {$cena += $spotrebic2;}
