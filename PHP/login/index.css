@@ -1,0 +1,28 @@
+section
+{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    padding: 20px;
+    margin: 50px;
+}
+#input_texts
+{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.button_input
+{   
+    border: solid 1px black;
+    padding: 20px;
+}
+.input_text
+{
+    margin-left: 20px;
+    width: 100%;
+}
+.button_input
+{
+    width: 100%;
+}

@@ -12,6 +12,13 @@ if (($_POST["user_name"]) == "admin" && $_POST["user_password"] == "admin") //is
     $_SESSION["user_name"] = $_POST["user_name"];
     $_SESSION["user_password"] = $_POST["user_password"];
     echo "uživatel je autorizovaný";
+
+    echo 
+    '
+    <form action="" method="get">
+        <input type="submit" name="uzivatelé" value="Otevřít seznam uživatelů">
+    </form>
+    ';    
 }
 
 //session a cookies fungujou podobně, cookies spravuje javascript
@@ -35,5 +42,10 @@ if (isset($_GET["logout"]))
 {
     session_unset();
     session_destroy();
+    header(header: "Location: index.php");
+}
+if (isset($_GET["uzivatelé"]))
+{
+    header(header: "Location: users.php");
 }
 ?>

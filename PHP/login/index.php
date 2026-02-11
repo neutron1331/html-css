@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     
-<h2>Login Form</h2>
+<section>
+    <h1>Login Form</h1>
 
-<form action="login.php" method="post">
-    Jméno: <input type="text" name="user_name"><br>
-    Heslo: <input type="text" name="user_password"><br>
-    <input type="submit">
-</form>
+    <form action="login.php" method="post">
+        <div id="input_texts">
+            <div id="input_text">
+                Jméno: <input class="input_text" type="text" name="user_name" required minlength="3"><br>
+            </div>        
+            <div id="input_text">
+                Heslo: <input class="input_text" type="text" name="user_password" required minlength="5"><br>
+            </div>
+        </div>  
+        <input class="button_input" type="submit">
+    </form>
+</section>
+    
 
 </body>
-</html>
+</html> 
