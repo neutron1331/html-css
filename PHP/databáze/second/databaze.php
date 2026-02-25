@@ -1,18 +1,21 @@
 <?php
 
-$dsn = "mysql:host=localhost;dbname=temp;charset=utf8";
-$username = "admin";
-$password = "admin";
+$host = "localhost";
+$db_name = "test";
+$dsn = "mysql:host=$host;dbname=$db_name;charset=utf8";
+$db_username = "admin";
+$db_password = "admin";
 
 try{
-    $db = new PDO($dsn, $username, $password);
-   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo"Jste připojen k DB";
+    $db = new PDO($dsn, $db_username, $db_password);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo"Jste připojen k DB <br>";
 }
 catch(PDOException $e){
-    echo "Nelze se připojit k DB: ". $e->getMessage();
+    echo "Nelze se připojit k DB: <br>". $e->getMessage();
     exit();
 }
+
 
 
 function get($table, $id): mixed
@@ -35,6 +38,14 @@ function getALL($table): array
     $stmt->execute();
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+function input_new_user($table)
+{
+    global $db;
+
+    $sql = "INSERT INTO $table (id, username, email, password)
+    VALUES ('John', 'Doe', 'john@example.com', 'asdf')";
 }
 
 ?>
