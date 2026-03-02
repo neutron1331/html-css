@@ -1,10 +1,10 @@
 <?php
 
 $host = "localhost";
-$db_name = "test";
+$db_name = "users"; //jméno databáze
 $dsn = "mysql:host=$host;dbname=$db_name;charset=utf8";
-$db_username = "admin";
-$db_password = "admin";
+$db_username = "admin"; //přihlašovací údaje do databáze
+$db_password = "admin"; //
 
 try{
     $db = new PDO($dsn, $db_username, $db_password);

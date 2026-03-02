@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Login</h2>
-    <form action="databaze.php" method="POST">
+    <form action="users.php" method="POST">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br><br>
         
