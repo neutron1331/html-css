@@ -1,7 +1,8 @@
 <?php
 
 include("./databaze.php");
-$users = getALL("users_table"); //název tabulky
+$table_name = "users_table"; //název tabulky
+$users = getALL($table_name);
 
 //echo"<br>".$users[0]["username"]."<br>";
 
@@ -35,24 +36,39 @@ function edit()
     ";
 }
 
-foreach ($users as $value) 
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset( $_POST["cache"]))
+{
+    $selected_user = "";
+}
+
+else if ($_SERVER["REQUEST_METHOD"] == "POST" && isset( $_POST["new_user"]))
+{
+
+}
+
+else foreach ($users as $value) 
 {
     echo"
     <tr>
-        <input type='hidden' name='cache' value='".$value["id"]."'>
+    <form method='post' style='display:inline;'>
+        <input type='hidden' name='cache' value=".$value["id"].">
         <td>".$value["id"]."</td>
         <td>".$value["username"]."</td>
         <td>".$value["email"]."</td>
         <td>".$value["password"]."</td>
         <td>".$value["account_status"]."</td>
         <td>".$value["date_of_creation"]."</td>
-        <td><form method='post' style='display:inline;'><button type='submit'>upravit</button></form></td>
-        <td><form method='post' style='display:inline;'><button type='submit'>zobrazit</button></form></td>
-        <td><form method='post' style='display:inline;'><button type='submit'>odstrani</button></form></td>
+        <td><input type='submit' name='button1' class='button' value='upravit'/></td>
+        <td><input type='submit' name='button2' class='button' value='zobrazit'/></td>
+        <td><input type='submit' name='button3' class='button' value='odstranin'/><td>
+        </form>
     </tr>
     ";
 }
-echo"<tr><td colspan='9'><button style='width:100%'>přidat uživatele</button></td></tr>";
+echo"
+    <form action='new_user.php' method='post' style='display:inline;'>
+        <tr><td colspan='9'><input type='submit' name='button4' class='button' value='přidat uživatele' style='width:100%'/></td></tr>
+    </form>";
 echo"</table><br>";
 
 

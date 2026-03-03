@@ -40,12 +40,15 @@ function getALL($table): array
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function input_new_user($table)
+function new_user($table, $id, $username, $email, $password): void
 {
     global $db;
 
-    $sql = "INSERT INTO $table (id, username, email, password)
-    VALUES ('John', 'Doe', 'john@example.com', 'asdf')";
+    $account_status = 2;
+    $date = date("Y-m-d H:i:s");
+
+    $sql = "INSERT INTO $table (id, username, email, password, account_status, date_of_creation)
+    VALUES ($id, $username, $email, $password, $account_status, $date)";
 }
 
 ?>

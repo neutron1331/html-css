@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Počítač: 127.0.0.1
--- Vytvořeno: Úte 03. bře 2026, 08:30
+-- Vytvořeno: Pon 02. bře 2026, 11:32
 -- Verze serveru: 10.4.32-MariaDB
 -- Verze PHP: 8.2.12
 
@@ -33,7 +33,7 @@ CREATE TABLE `users_table` (
   `email` text NOT NULL,
   `password` text NOT NULL,
   `account_status` int(50) NOT NULL,
-  `date_of_creation` datetime(6) NOT NULL
+  `date_of_creation` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -41,11 +41,11 @@ CREATE TABLE `users_table` (
 --
 
 INSERT INTO `users_table` (`id`, `username`, `email`, `password`, `account_status`, `date_of_creation`) VALUES
-(1, 'admin', 'admin@admin.com', 'admin', 1, '2026-03-02 00:00:00.000000'),
-(1, 'admin', 'admin@admin.com', 'admin', 1, '2026-03-02 00:00:00.000000'),
-(2, 'john', 'john.mammal@email.com', 'jonny', 3, '2026-03-02 00:00:00.000000'),
-(1, 'admin', 'admin@admin.com', 'admin', 1, '2026-03-02 00:00:00.000000'),
-(2, 'john', 'john.mammal@email.com', 'jonny', 3, '2026-03-02 00:00:00.000000');
+(1, 'admin', 'admin@admin.com', 'admin', 1, 20260302),
+(1, 'admin', 'admin@admin.com', 'admin', 1, 20260302),
+(2, 'john', 'john.mammal@email.com', 'jonny', 3, 20260302),
+(1, 'admin', 'admin@admin.com', 'admin', 1, 20260302),
+(2, 'john', 'john.mammal@email.com', 'jonny', 3, 20260302);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
