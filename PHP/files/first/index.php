@@ -22,5 +22,11 @@
 
         <button type="submit">Submit</button>
     </form>
+
+<br><br>
+
+    <form action="files.php" method="POST">
+        <button type="submit">Just enter</button>
+    </form>
 </body>
 </html>

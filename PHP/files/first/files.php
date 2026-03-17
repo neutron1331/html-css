@@ -1,5 +1,6 @@
 <?php
 
+// basename() Returns the filename component of a path
 // mkdir()	Creates a directory
 // rmdir()	Removes an empty directory
 // file()	Reads a file into an array
@@ -23,7 +24,10 @@ echo"<table border=".$border.">";
 echo"<tr><td>tree before edit</td></tr>";
 foreach (scandir($cwd) as $dir)  
 {
-    echo"<tr><td>".$dir."</td></tr>";
+    if(!(basename($dir) === "." or basename($dir) === ".."))
+    {
+        echo"<tr><td>".$dir."</td></tr>";
+    }
 }
 echo"</table>";
 
@@ -49,8 +53,18 @@ if (isset($_POST["create_dir"]))
 
 if (isset($_POST["delete_dir"]))
 {
+    $delete_dir = $_POST["delete_dir"]; 
+}
+
+if (isset($_POST["button_delete"]))
+{
+    $delete_dir = basename($_POST["button_delete"]);   
+}
+
+if (isset($delete_dir))
+{
     echo"delete </h3>";
-    $func = $_POST["delete_dir"];
+    $func = $delete_dir;
     $func = $cwd."/".$func;
 
     if (is_dir($func))
@@ -64,12 +78,34 @@ if (isset($_POST["delete_dir"]))
     }
 }
 
-echo"<table border=".$border.">";
-echo"<tr><td>tree after edit</td></tr>";
+
+echo"<table border=".$border." style='border-collapse: collapsed;'>";
+echo"<tr><td colspan='2'>tree after edit</td></tr>";
 foreach (scandir($cwd) as $dir)  
 {
-    echo"<tr><td>".$dir."</td></tr>";
+    if(!(basename($dir) === "." or basename($dir) === ".."))
+    {
+    echo"
+    <tr>
+        <td>".$dir."</td>
+        <td>
+            <form style='display:inline;' method='POST'>
+                <button style='width:100%' type='submit' name='button_delete' value=".$dir.">Delete</button>
+            </form>
+        </td>
+    </tr>";
+    }
 }
+echo"
+<tr>
+    <td colspan='2'>
+        <form style='display:inline;' method='POST'>
+            <label for='create_dir'>Name of the new directory: </label>
+            <input type='text' id='create_dir' name='create_dir' required>
+            <button type='submit'>Submit</button>
+        </form>
+    </td>
+</tr>";
 echo"</table>";
 
 ?>
